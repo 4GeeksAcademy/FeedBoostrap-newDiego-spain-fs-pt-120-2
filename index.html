@@ -1,268 +1,275 @@
     <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
 
-    <!-- Font Awesome -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    referrerpolicy="no-referrer"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Bootstrap CSS -->
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    crossorigin="anonymous"
-    />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    referrerpolicy="no-referrer" />
 
-    <title>Responsive Navbar</title>
-    </head>
-    <body style="background-color: #f8fff8d1;">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
+
+  <title>Responsive Navbar</title>
+</head>
+
+<body style="background-color: #f8fff8d1;">
 
 
-    <nav class="navbar bg-light border-bottom ">
+  <nav class="navbar bg-light border-bottom ">
     <div class="container ">
-    <div class="row w-100 align-items-center text-center text-lg-start">
+      <div class="row w-100 align-items-center text-center text-lg-start">
 
-    <!-- Logo -->
-    <div class="col-lg-3 col-12 d-flex justify-content-center justify-content-lg-start align-items-center mb-2 mb-lg-0">
-    <a class="navbar-brand border-end pe-3" href="https://www.instagram.com/">
-    <i class="fa-brands fa-instagram"></i>
-    </a>
-    <a href="https://www.instagram.com/"><img src="instagra.png" class="img-fluid ms-2" style="width: 100px" /></a>
+        <!-- Logo -->
+        <div
+          class="col-lg-3 col-12 d-flex justify-content-center justify-content-lg-start align-items-center mb-2 mb-lg-0">
+          <a class="navbar-brand border-end pe-3" href="https://www.instagram.com/">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.instagram.com/"><img src="instagra.png" class="img-fluid ms-2"
+              style="width: 100px" /></a>
+        </div>
+
+        <!-- Buscador -->
+        <div class="col-lg-6 col-12 mb-2 mb-lg-0 d-flex justify-content-center">
+          <form class="d-flex position-relative" role="search" style="max-width: 300px; width: 100%;">
+            <input class="form-control pe-5" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-link position-absolute end-0 top-50 translate-middle-y me-2" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Botón + Dropdown -->
+        <div
+          class="col-lg-3 col-12 d-flex justify-content-center justify-content-lg-end align-items-center gap-2 mb-2 mb-lg-0">
+
+          <!-- Botón que abre el modal -->
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Create a new post
+          </button>
+
+          <!-- Dropdown -->
+          <div class="dropdown">
+            <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-gear"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
     </div>
+  </nav>
 
-    <!-- Buscador -->
-    <div class="col-lg-6 col-12 mb-2 mb-lg-0 d-flex justify-content-center">
-    <form class="d-flex position-relative" role="search" style="max-width: 300px; width: 100%;">
-    <input class="form-control pe-5" type="search" placeholder="Search" aria-label="Search"/>
-    <button class="btn btn-link position-absolute end-0 top-50 translate-middle-y me-2" type="submit">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-    </form>
-    </div>
-
-    <!-- Botón + Dropdown -->
-    <div class="col-lg-3 col-12 d-flex justify-content-center justify-content-lg-end align-items-center gap-2 mb-2 mb-lg-0">
-
-    <!-- Botón que abre el modal -->
-    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Create a new post
-    </button>
-
-    <!-- Dropdown -->
-    <div class="dropdown">
-    <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="fa-solid fa-gear"></i>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-    </ul>
-    </div>
-
-    </div>
-
-    </div>
-    </div>
-    </nav>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
-    <div class="modal-content">
+      <div class="modal-content">
 
-    <div class="modal-header">
-    <h5 class="modal-title">Create a new post</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
+        <div class="modal-header">
+          <h5 class="modal-title">Create a new post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
 
-    <div class="modal-body">
-    <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label"><strong>Caption:</strong></label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Add the caption of your post here" rows="3"></textarea>
-    </div>
-    <i class="fa-solid fa-camera ms-1 border rounded-circle p-2"></i>
-    <i class="fa-solid fa-location-dot ms-3 border rounded-circle p-2"></i>
-    </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"><strong>Caption:</strong></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1"
+              placeholder="Add the caption of your post here" rows="3"></textarea>
+          </div>
+          <i class="fa-solid fa-camera ms-1 border rounded-circle p-2"></i>
+          <i class="fa-solid fa-location-dot ms-3 border rounded-circle p-2"></i>
+        </div>
 
-    <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-    <button type="button" class="btn btn-primary">Save changes</button>
-    </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
 
+      </div>
     </div>
-    </div>
-    </div>
+  </div>
 
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IG Feed Responsive</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
+  </head>
+
+  <body>
 
 
 
     <nav>
-    <div class="nav nav-pills justify-content-center gap-2 my-3" role="tablist">
+      <div class="nav nav-pills justify-content-center gap-2 my-3" role="tablist">
 
-    <!-- Botón Feed -->
-    <button class="nav-link active text-success shadow-sm px-3 py-2 bg-success bg-opacity-25" 
-    id="home-tab" data-bs-toggle="tab" data-bs-target="#home" 
-    type="button" role="tab" aria-controls="home" aria-selected="true">
-    <i class="fa-solid fa-house-chimney-user"></i>
-    </button>
+        <!-- Botón Feed -->
+        <button class="nav-link active text-success shadow-sm px-3 py-2 bg-success bg-opacity-25" id="home-tab"
+          data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home"
+          aria-selected="true">
+          <i class="fa-solid fa-house-chimney-user"></i>
+        </button>
 
-    <!-- Botón Publicaciones -->
-    <button class="nav-link text-success shadow-sm px-3 py-2 bg-light" 
-    id="otro-tab" data-bs-toggle="tab" data-bs-target="#otro" 
-    type="button" role="tab" aria-controls="otro" aria-selected="false">
-    <i class="fa-solid fa-house"></i>
-    </button>
+        <!-- Botón Publicaciones -->
+        <button class="nav-link text-success shadow-sm px-3 py-2 bg-light" id="otro-tab" data-bs-toggle="tab"
+          data-bs-target="#otro" type="button" role="tab" aria-controls="otro" aria-selected="false">
+          <i class="fa-solid fa-house"></i>
+        </button>
 
-    </div>
+      </div>
     </nav>
-   
+
     <div class="tab-content">
 
-    <!-- TAB HOME con galería -->
-    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-    <div class="container-fluid px-2">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
+      <!-- TAB HOME con galería -->
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <div class="container-fluid px-2">
+          <div class="g-2">
 
-    <div class="col">
-    <img src="10.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
-    </div>
+            <div class="col">
+              <img src="10.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
+            </div>
 
-    <div class="col">
-    <img src="11.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
-    </div>
-   
-    <div class="col">
-    <img src="13.avif" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
-    </div>
+            <div class="">
+              <img src="11.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
+            </div>
 
-    <div class="col">
-    <img src="20.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
-    </div>
+            <div class="">
+              <img src="13.avif" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
+            </div>
 
-    <div class="col">
-    <img src="21.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
-    </div>
+            <div class="">
+              <img src="20.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
+            </div>
 
-    <div class="col">
-    <img src="16.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
-    </div>
+            <div class="">
+              <img src="21.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
+            </div>
 
-    <div class="col">
-    <img src="22.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
-    </div>
+            <div class="">
+              <img src="16.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
+            </div>
 
-    <div class="col">
-    <img src="24.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
-    </div>
+            <div class="">
+              <img src="22.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
+            </div>
 
-    <div class="col">
-    <img src="23.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
-    </div>
+            <div class="">
+              <img src="24.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
+            </div>
 
-    </div>
-    </div>
-    </div>
-  
+            <div class="">
+              <img src="23.jpg" class="img-fluid w-100 rounded object-fit-cover" style="aspect-ratio: 1 / 1;">
+            </div>
 
-     <!--Apartado de publicaciones-->
-<div class="tab-pane fade" id="otro" role="tabpanel" aria-labelledby="otro-tab" tabindex="0">
-  <div class="container mt-3">
-    <div class="row justify-content-center">
-
-      <!-- Publicación 1 -->
-      <div class="col-12 mb-3">
-        <div class="card mx-auto" style="max-width: 600px;">
-          <div class="card-header d-flex justify-content-between align-items-center">
-            <span class="fw-bold fs-5">Artista Favorita</span>
-            <small class="text-muted fs-6">08/26/2025</small>
-          </div>
-          <div class="d-flex justify-content-center align-items-center" style="aspect-ratio: 1 / 1; overflow: hidden;">
-            <img src="30.jpg" alt="Publicación" class="img-fluid w-100 h-100" style="object-fit: cover;">
-          </div>
-          <div class="card-body">
-            <p class="fw-bold mb-1 fs-5">1.204 Likes ❤️</p>
-            <p class="card-text fs-6 mb-0">Vibrando con la música de hoy! 🎤✨ #Concierto #Música #Increíble</p>
           </div>
         </div>
       </div>
 
-      <!-- Publicación 2 -->
-      <div class="col-12 mb-3">
-        <div class="card mx-auto" style="max-width: 600px;">
-          <div class="card-header d-flex justify-content-between align-items-center">
-            <span class="fw-bold fs-5">Artista Favorita</span>
-            <small class="text-muted fs-6">07/15/2025</small>
-          </div>
-          <div class="d-flex justify-content-center align-items-center" style="aspect-ratio: 1 / 1; overflow: hidden;">
-            <img src="8.jpg" alt="Publicación" class="img-fluid w-100 h-100" style="object-fit: cover;">
-          </div>
-          <div class="card-body">
-            <p class="fw-bold mb-1 fs-5">987 Likes 🎶</p>
-            <p class="card-text fs-6 mb-0">Capturando momentos mágicos ✨💫 #Show #Vibes #Momentos</p>
+
+      <!--Apartado de publicaciones-->
+      <div class="tab-pane fade" id="otro" role="tabpanel" aria-labelledby="otro-tab" tabindex="0">
+        <div class="container mt-3">
+          <div class="row justify-content-center">
+
+            <!-- Publicación 1 -->
+            <div class="col-12 mb-3">
+              <div class="card mx-auto" style="max-width: 600px;">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <span class="fw-bold fs-5">Artista Favorita</span>
+                  <small class="text-muted fs-6">08/26/2025</small>
+                </div>
+                <div class="d-flex justify-content-center align-items-center"
+                  style="aspect-ratio: 1 / 1; overflow: hidden;">
+                  <img src="30.jpg" alt="Publicación" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                </div>
+                <div class="card-body">
+                  <p class="fw-bold mb-1 fs-5">1.204 Likes ❤️</p>
+                  <p class="card-text fs-6 mb-0">Vibrando con la música de hoy! 🎤✨ #Concierto #Música #Increíble</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Publicación 2 -->
+            <div class="col-12 mb-3">
+              <div class="card mx-auto" style="max-width: 600px;">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <span class="fw-bold fs-5">Artista Favorita</span>
+                  <small class="text-muted fs-6">07/15/2025</small>
+                </div>
+                <div class="d-flex justify-content-center align-items-center"
+                  style="aspect-ratio: 1 / 1; overflow: hidden;">
+                  <img src="8.jpg" alt="Publicación" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                </div>
+                <div class="card-body">
+                  <p class="fw-bold mb-1 fs-5">987 Likes 🎶</p>
+                  <p class="card-text fs-6 mb-0">Capturando momentos mágicos ✨💫 #Show #Vibes #Momentos</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Publicación 3 -->
+            <div class="col-12 mb-3">
+              <div class="card mx-auto" style="max-width: 600px;">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <span class="fw-bold fs-5">Artista Favorita</span>
+                  <small class="text-muted fs-6">06/05/2025</small>
+                </div>
+                <div class="d-flex justify-content-center align-items-center"
+                  style="aspect-ratio: 1 / 1; overflow: hidden;">
+                  <img src="10.jpg" alt="Publicación" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                </div>
+                <div class="card-body">
+                  <p class="fw-bold mb-1 fs-5">1.532 Likes 🌟</p>
+                  <p class="card-text fs-6 mb-0">Día lleno de creatividad y música 🎶🎨 #Arte #Música #Inspiración</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Publicación 4 -->
+            <div class="col-12 mb-3">
+              <div class="card mx-auto" style="max-width: 600px;">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <span class="fw-bold fs-5">Artista Favorita</span>
+                  <small class="text-muted fs-6">05/20/2025</small>
+                </div>
+                <div class="d-flex justify-content-center align-items-center"
+                  style="aspect-ratio: 1 / 1; overflow: hidden;">
+                  <img src="34.jpg" alt="Publicación" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                </div>
+                <div class="card-body">
+                  <p class="fw-bold mb-1 fs-5">1.120 Likes 💜</p>
+                  <p class="card-text fs-6 mb-0">Increíble energía en el escenario 🌟🎤 #Concierto #MúsicaEnVivo #Fan
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
-      <!-- Publicación 3 -->
-      <div class="col-12 mb-3">
-        <div class="card mx-auto" style="max-width: 600px;">
-          <div class="card-header d-flex justify-content-between align-items-center">
-            <span class="fw-bold fs-5">Artista Favorita</span>
-            <small class="text-muted fs-6">06/05/2025</small>
-          </div>
-          <div class="d-flex justify-content-center align-items-center" style="aspect-ratio: 1 / 1; overflow: hidden;">
-            <img src="10.jpg" alt="Publicación" class="img-fluid w-100 h-100" style="object-fit: cover;">
-          </div>
-          <div class="card-body">
-            <p class="fw-bold mb-1 fs-5">1.532 Likes 🌟</p>
-            <p class="card-text fs-6 mb-0">Día lleno de creatividad y música 🎶🎨 #Arte #Música #Inspiración</p>
-          </div>
-        </div>
-      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
 
-      <!-- Publicación 4 -->
-      <div class="col-12 mb-3">
-        <div class="card mx-auto" style="max-width: 600px;">
-          <div class="card-header d-flex justify-content-between align-items-center">
-            <span class="fw-bold fs-5">Artista Favorita</span>
-            <small class="text-muted fs-6">05/20/2025</small>
-          </div>
-          <div class="d-flex justify-content-center align-items-center" style="aspect-ratio: 1 / 1; overflow: hidden;">
-            <img src="34.jpg" alt="Publicación" class="img-fluid w-100 h-100" style="object-fit: cover;">
-          </div>
-          <div class="card-body">
-            <p class="fw-bold mb-1 fs-5">1.120 Likes 💜</p>
-            <p class="card-text fs-6 mb-0">Increíble energía en el escenario 🌟🎤 #Concierto #MúsicaEnVivo #Fan</p>
-          </div>
-        </div>
-      </div>
+  </body>
 
-    </div>
-  </div>
-</div>
-
-    <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"
-    ></script>
-
-    </body>
-    </html>
+  </html>
